@@ -11,10 +11,64 @@ body {
     background-size: cover; /* Ensure the image covers the container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent tiling */
-    min-height: 300px; /* Make the background cover the full viewport height */
-    max-width: 300px;
+    min-height: 600px; /* Make the background cover the full viewport height */
+    max-width: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
   }
-  
-  
+  header {
+    text-align: center; /* Centers the header content */
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px; /* Space between items */
+  }
+
+  .nav-bar li {
+    position: relative; /* Required for adding a pseudo-element */
+  }
+
+  .nav-bar li:not(:last-child)::after {
+    content: "|"; /* Adds the divider */
+    position: absolute;
+    right: -10px; /* Adjusts the position of the divider */
+    color: #ccc; /* Divider color */
+    font-weight: bold;
+  }
+
+  .nav-bar a {
+    text-decoration: none;
+    color: grey;
+    font-weight: medium;
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+
+  .nav-bar a:hover {
+    color: #33beff; /* Changes color on hover */
+    text-decoration: underline;
+  }
+  .header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around
+  }
+  .search-bar input{
+    padding: 8px;
+    width:300px;
+    border-radius: 10px;
+    border-color: black;
+  }
+  .header-right a svg {
+    width: 24px; /* Icon width */
+    height: 24px; /* Icon height */
+    fill: #000; /* Icon color */
+    margin-left: 10px; /* Spacing between icons */
+  }
