@@ -1,6 +1,7 @@
-{% section 'header' %}
-<h1>{{ 'general.welcome' | t }}</h1>
-{% for product in collections.frontpage.products %}
-  {% include 'product-card' with product %}
-{% endfor %}
-{% section 'footer' %}
+<div class="home-page-bg">
+  {% section 'header' %}
+  <div class="content">
+    {{ content_for_layout }}
+  </div>
+  {% section 'footer' %}
+</div>

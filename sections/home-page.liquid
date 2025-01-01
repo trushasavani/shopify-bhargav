@@ -1,0 +1,21 @@
+<div class="home-page-bg" 
+     style="background-image: url({{ section.settings.background_image | asset_url }});">
+  {% section 'header' %}
+  <div class="content">
+    {{ content_for_layout }}
+  </div>
+  {% section 'footer' %}
+</div>
+
+{% schema %}
+{
+  "name": "Home Page Background",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    }
+  ]
+}
+{% endschema %}
