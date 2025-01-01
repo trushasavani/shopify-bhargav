@@ -72,3 +72,9 @@ body {
     fill: #000; /* Icon color */
     margin-left: 10px; /* Spacing between icons */
   }
+  .overlay-content h1{
+    color: #FFF;
+    font-size: 50px;
+    width: 500px;
+    padding: 50px;
+  }

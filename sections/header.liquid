@@ -27,7 +27,7 @@
       </a>
     </div> {% endcomment %}
   </div>
-  <nav>
+  {% comment %} <nav>
     <ul class="nav-bar">
      
       <li><a href="/collections/rings">Rings</a></li>
@@ -41,5 +41,151 @@
       <li><a href="/collections/10-plus-1-monthly-plan">10+1 Monthly Plan</a></li>
       <li><a href="/collections/locate-our-store">Locate Our Store</a></li>
     </ul>
+  </nav> {% endcomment %}
+  
+  <nav>
+    <ul class="nav-bar">
+      <li><a href="{{ section.settings.link_1_url }}">{{ section.settings.link_1_text }}</a></li>
+      <li><a href="{{ section.settings.link_2_url }}">{{ section.settings.link_2_text }}</a></li>
+      <li><a href="{{ section.settings.link_3_url }}">{{ section.settings.link_3_text }}</a></li>
+      <li><a href="{{ section.settings.link_4_url }}">{{ section.settings.link_4_text }}</a></li>
+      <li><a href="{{ section.settings.link_5_url }}">{{ section.settings.link_5_text }}</a></li>
+      <li><a href="{{ section.settings.link_6_url }}">{{ section.settings.link_6_text }}</a></li>
+      <li><a href="{{ section.settings.link_7_url }}">{{ section.settings.link_7_text }}</a></li>
+      <li><a href="{{ section.settings.link_8_url }}">{{ section.settings.link_8_text }}</a></li>
+      <li><a href="{{ section.settings.link_9_url }}">{{ section.settings.link_9_text }}</a></li>
+      <li><a href="{{ section.settings.link_10_url }}">{{ section.settings.link_10_text }}</a></li>
+      <!-- Add more links as needed -->
+    </ul>
   </nav>
+
+ 
+{% schema %}
+  {
+    "name": "Navigation Menu",
+    "settings": [
+      {
+        "type": "text",
+        "id": "link_1_text",
+        "label": "Link 1 Text",
+        "default": "Rings"
+      },
+      {
+        "type": "url",
+        "id": "link_1_url",
+        "label": "Link 1 URL",
+        "default": "/collections/rings"
+      },
+      {
+        "type": "text",
+        "id": "link_2_text",
+        "label": "Link 2 Text",
+        "default": "Earrings"
+      },
+      {
+        "type": "url",
+        "id": "link_2_url",
+        "label": "Link 2 URL",
+        "default": "/collections/earrings"
+      },
+      {
+        "type": "text",
+        "id": "link_3_text",
+        "label": "Link 3 Text",
+        "default": "Pendants"
+      },
+      {
+        "type": "url",
+        "id": "link_3_url",
+        "label": "Link 3 URL",
+        "default": "/collections/pendants"
+      },
+      {
+        "type": "text",
+        "id": "link_4_text",
+        "label": "Link 4 Text",
+        "default": "All-jewellery"
+      },
+      {
+        "type": "url",
+        "id": "link_4_url",
+        "label": "Link 4 URL",
+        "default": "/collections/all-jewellery"
+      },
+      {
+        "type": "text",
+        "id": "link_5_text",
+        "label": "Link 3 Text",
+        "default": "Gifts"
+      },
+      {
+        "type": "url",
+        "id": "link_5_url",
+        "label": "Link 3 URL",
+        "default": "/collections/gifts"
+      },
+      {
+        "type": "text",
+        "id": "link_6_text",
+        "label": "Link 3 Text",
+        "default": "Gold-coins"
+      },
+      {
+        "type": "url",
+        "id": "link_6_url",
+        "label": "Link 3 URL",
+        "default": "/collections/gold-coins"
+      },
+      {
+        "type": "text",
+        "id": "link_7_text",
+        "label": "Link 3 Text",
+        "default": "Chains"
+      },
+      {
+        "type": "url",
+        "id": "link_7_url",
+        "label": "Link 3 URL",
+        "default": "/collections/chains"
+      },
+      {
+        "type": "text",
+        "id": "link_8_text",
+        "label": "Link 3 Text",
+        "default": "Ready-to-ship"
+      },
+      {
+        "type": "url",
+        "id": "link_8_url",
+        "label": "Link 3 URL",
+        "default": "/collections/ready-to-ship"
+      },
+      {
+        "type": "text",
+        "id": "link_9_text",
+        "label": "Link 3 Text",
+        "default": "10-plus-1-monthly-plan"
+      },
+      {
+        "type": "url",
+        "id": "link_9_url",
+        "label": "Link 3 URL",
+        "default": "/collections/10-plus-1-monthly-plan"
+      },
+      {
+        "type": "text",
+        "id": "link_10_text",
+        "label": "Link 3 Text",
+        "default": "locate-our-store"
+      },
+      {
+        "type": "url",
+        "id": "link_10_url",
+        "label": "Link 3 URL",
+        "default": "/collections/locate-our-store"
+      }
+      
+    ]
+  }
+  {% endschema %}
 </header>

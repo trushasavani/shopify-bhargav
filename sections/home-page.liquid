@@ -1,20 +1,26 @@
 <div class="home-page-bg" 
      style="background-image: url({{ section.settings.background_image | img_url: 'original' }});">
   <div class="overlay-content">
-    <h1>Hello World</h1>
+    <h1>{{ section.settings.header_text }}</h1>
   </div>
 </div>
 
 
 {% schema %}
-{
-  "name": "Home Page Background",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "Background Image"
-    }
-  ]
-}
-{% endschema %}
+  {
+    "name": "Home Page Background",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "header_text",
+        "label": "Header Text",
+        "default": "Diamond Jewelry Collection"
+      }
+    ]
+  }
+  {% endschema %}
