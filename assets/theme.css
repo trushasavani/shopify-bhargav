@@ -11,7 +11,8 @@ body {
     background-size: cover; /* Ensure the image covers the container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent tiling */
-    min-height: 100vh; /* Make the background cover the full viewport height */
+    min-height: 300px; /* Make the background cover the full viewport height */
+    max-width: 300px;
     display: flex;
     flex-direction: column;
   }
