@@ -22,7 +22,8 @@
       "home-page": {
         "type": "home-page",
         "settings": {
-          "background_image": "shopify://shop_images/2.jpg"
+          "background_image": "shopify://shop_images/2.jpg",
+          
 
         }
       }
