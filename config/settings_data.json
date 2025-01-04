@@ -9,23 +9,21 @@
  */
 {
   "current": {
-    "store_name": "KISNA",
     "sections": {
       "header": {
         "type": "header",
-        "settings": {}
-      },
-      "footer": {
-        "type": "footer",
         "settings": {}
       },
       "home-page": {
         "type": "home-page",
         "settings": {
           "background_image": "shopify://shop_images/2.jpg",
-          
-
+          "header_text": "Diamond Jewelry Collection"
         }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {}
       }
     },
     "content_for_index": []
