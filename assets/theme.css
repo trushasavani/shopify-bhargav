@@ -1,3 +1,7 @@
+*{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif';
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,18 +11,51 @@ body {
   h1 {
     color: #333;
   }
+  .search-bar-container {
+    position: relative;
+    width: 100%;
+    
+  }
+  
+  .search-bar-container input {
+    width: 391px;
+    padding: 8px 20px 8px 10px; 
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    height: 25px;
+  }
+  
+  .search-bar-container .search-icon {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #FFF;
+    pointer-events: none;
+    border: 1px solid grey;
+    font-size: 16px;
+    padding: 7px;
+    border-radius: 50%;
+    background-color: black;
+    
+    
+  }
+  
   .home-page-bg {
-    background-size: cover; /* Ensure the image covers the container */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent tiling */
-    min-height: 600px; /* Make the background cover the full viewport height */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-height: 600px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 30px;
   }
   header {
-    text-align: center; /* Centers the header content */
+    text-align: center;
   }
 
   .nav-bar {
@@ -47,7 +84,7 @@ body {
     color: grey;
     font-weight: medium;
     font-size: 18px;
-    font-family:'Times New Roman', Times, serif
+    font-family:'karla'
   }
 
   .nav-bar a:hover {
@@ -63,7 +100,7 @@ body {
   .search-bar input{
     padding: 8px;
     width:300px;
-    border-radius: 10px;
+    border-radius: 30px;
     border-color: black;
   }
   .header-right a svg {
@@ -89,7 +126,7 @@ body {
     
   }
   .overlay-content button{
-    color: black;
+    color: #FFF;
     font-size: 16px;
     background-color:#160C49;
     /* padding-left: 50px; */
@@ -100,9 +137,9 @@ body {
     border-radius: 30px;
   }
   .header-right a {
-    margin-right: 10px;  /* Add margin between the icons */
-    padding: 10px;       /* Add padding around the icons */
-    border: 1px solid grey;  /* Add a border around the icons (you can change color) */
+    margin-right: 10px; 
+    padding: 10px;      
+    border: 1px solid grey;  
     border-radius: 50%;   
    
   }

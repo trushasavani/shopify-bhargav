@@ -7,9 +7,11 @@
     <!-- Search Bar -->
     <div class="header-left">
       <form action="/search" method="get" class="search-bar">
-        <input type="text" name="q" placeholder="Search products..." />
-    
-      </form>
+    <div class="search-bar-container">
+      <input type="text" name="q" placeholder="{{ section.settings.search_placeholder }}" />
+      <i class="fas fa-search search-icon"></i>
+    </div>
+  </form>
     </div>
 
     <!-- Store Name -->
@@ -172,7 +174,13 @@
         "id": "link_10_url",
         "label": "Link 3 URL",
         "default": "/collections/locate-our-store"
-      }
+      },
+      {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search Placeholder",
+      "default": "Search products..."
+    }
       
     ]
   }
