@@ -47,7 +47,7 @@ body {
     color: grey;
     font-weight: medium;
     font-size: 18px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Times New Roman', Times, serif
   }
 
   .nav-bar a:hover {
@@ -73,8 +73,68 @@ body {
     margin-left: 10px; /* Spacing between icons */
   }
   .overlay-content h1{
-    color: #FFF;
-    font-size: 50px;
+    color: black;
+    font-size: 60px;
     width: 500px;
-    padding: 50px;
+    padding-top: 50px;
+    padding-left: 100px;
+    margin-bottom: 0px;
   }
+  .overlay-content h4{
+    color: black;
+    font-size: 18px;
+    width: 750px;
+    padding-left: 100px;
+    padding-top: 0px;
+    
+  }
+  .overlay-content button{
+    color: #FFF;
+    font-size: 16px;
+    background-color:#160C49;
+    /* padding-left: 50px; */
+    margin-left: 100px;
+    padding: 10px;
+    border:none;
+    padding:10px 20px;
+    border-radius: 30px;
+  }
+  .header-right a {
+    margin-right: 10px;  /* Add margin between the icons */
+    padding: 10px;       /* Add padding around the icons */
+    border: 1px solid grey;  /* Add a border around the icons (you can change color) */
+    border-radius: 50%;   
+   
+  }
+  
+  .header-right a i {
+    color: black; /* Icons are black */
+    font-size: 14px;    /* Adjust the icon size */
+   
+   
+  }
+  
+  .header-right a i:hover {
+    color: gray; /* Optional: gray color on hover */
+  }
+  .main-card{
+    background-color: #FFF;
+    width:200px;
+    padding: 10px;
+    display: flex;
+  }
+  .Main-special span{
+    display: flex;
+  }
+  .Special{
+    color: grey;
+
+
+  }
+  .rings{
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 700;
+  }
+  
+  

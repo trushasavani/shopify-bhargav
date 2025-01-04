@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "store_name": "Trusha Savani",
+    "store_name": "Trusha_Savani",
     "sections": {
       "header": {
         "type": "header",
@@ -23,6 +23,7 @@
         "type": "home-page",
         "settings": {
           "background_image": "shopify://shop_images/2.jpg"
+
         }
       }
     },
