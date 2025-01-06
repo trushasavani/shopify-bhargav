@@ -9,9 +9,9 @@
   <script src="{{ 'theme.js' | asset_url }}" defer></script>
 </head>
 <body>
-  {% section 'header' %}
- {% section 'home-page' %}
   {{ content_for_layout }}
-  {% section 'footer' %}
+  {% section 'header' %}
+ {% comment %} {% section 'home-page' %}
+  {% section 'footer' %} {% endcomment %}
 </body>
 </html>
