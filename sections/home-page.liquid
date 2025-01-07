@@ -2,8 +2,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<div class="home-page-bg" style="background-image: url({{ section.settings.background_image | img_url: 'original' }});">
- 
+{% comment %} <div class="home-page-bg" style="background-image: url({{ section.settings.background_image | img_url: 'original' }});"> {% endcomment %}
+  <div class="home-page-bg" style="background-image: url({{ settings.background_image | img_url: 'original' }});">
+    <!-- Your content goes here -->
+  </div>
 {% comment %} <div class="home-page-bg" style="background-image: url({{ section.settings.background_image | img_url: 'original' | default: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg' }});"> {% endcomment %}
 <div class="home-page-bg" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg');">
 <div class="container-1">
