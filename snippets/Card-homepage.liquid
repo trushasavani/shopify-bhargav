@@ -1,0 +1,24 @@
+<div class="custom-container" style="max-width: {{ settings.container_width }}px; margin: 0 auto;">
+  <div class="image-row" style="display: flex; gap: {{ settings.image_gap }}px;">
+    <!-- Image 1 -->
+    {% if settings.image_1 %}
+      <img src="{{ settings.image_1 | img_url: 'original' }}" alt="Image 1" class="image">
+    {% else %}
+      <img src="https://media.istockphoto.com/id/483955929/photo/treasure.jpg?s=612x612&w=0&k=20&c=YTKQ9NUfvJUKXX-k6Os_XixMQ9vjDWhdwclBmV_uVas=" alt="Image 1" class="image">
+    {% endif %}
+
+    <!-- Image 2 -->
+    {% if settings.image_2 %}
+      <img src="{{ settings.image_2 | img_url: 'original' }}" alt="Image 2" class="image">
+    {% else %}
+      <img src="https://img.onmanorama.com/content/dam/mm/en/news/business/images/2021/1/6/gold-jewellry-treasure.jpg" alt="Image 2" class="image">
+    {% endif %}
+
+    <!-- Image 3 -->
+    {% if settings.image_3 %}
+      <img src="{{ settings.image_3 | img_url: 'original' }}" alt="Image 3" class="image">
+    {% else %}
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqXuahjHAyblCPAv-WkLtlTl4fblIxL2eX4A4eWw-BZdq90YmRcjuTzD9_1rdVhXSqsf0&usqp=CAU" alt="Image 3" class="image">
+    {% endif %}
+  </div>
+</div>

@@ -107,8 +107,9 @@
   width: 70%;
   overflow: hidden;
   position: absolute;
-  color: rgb(10, 10, 10);
+  color: #424242;
   padding: 20px;
+  margin-top: 50px;
 }
 
 
@@ -119,7 +120,7 @@
 }
 
 .overlay-card {
-  margin-top: 40%;
+  margin-top: 30%;
   display: flex;
   gap: 18px;
 }

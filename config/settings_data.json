@@ -12,7 +12,6 @@
           "show_wishlist_icon": true
         }
       },
-     
       "footer": {
         "type": "footer",
         "settings": {}
@@ -22,7 +21,37 @@
         "settings": {
           "background_image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg",
           "heading_text": "Diamond Jewelry Collection",
-          "description_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luct."
+          "description_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luct.",
+          "custom_images": {
+            "image_1": {
+              "type": "image_picker",
+              "label": "Image 1"
+            },
+            "image_2": {
+              "type": "image_picker",
+              "label": "Image 2"
+            },
+            "image_3": {
+              "type": "image_picker",
+              "label": "Image 3"
+            },
+            "container_width": {
+              "type": "range",
+              "label": "Container Width",
+              "default": 1144,
+              "min": 1000,
+              "max": 1600,
+              "step": 10
+            },
+            "image_gap": {
+              "type": "range",
+              "label": "Image Gap",
+              "default": 10,
+              "min": 5,
+              "max": 50,
+              "step": 1
+            }
+          }
         }
       }
     },
