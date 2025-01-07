@@ -2,12 +2,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-{% comment %} <div class="home-page-bg" style="background-image: url({{ section.settings.background_image | img_url: 'original' }});"> {% endcomment %}
-  <div class="home-page-bg" style="background-image: url({{ settings.background_image | img_url: 'original' }});">
-    <!-- Your content goes here -->
-  </div>
-{% comment %} <div class="home-page-bg" style="background-image: url({{ section.settings.background_image | img_url: 'original' | default: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg' }});"> {% endcomment %}
-<div class="home-page-bg" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg');">
+
+<div class="home-page-bg" style="background-image: url('https://www.caratlane.com/blog/wp-content/uploads/2023/10/1B-14.jpg');">
 <div class="container-1">
   <div class="overlay-text">
     <h2 class="responsive-heading">{{ section.settings.heading_text | default: "Exclusive Offers" }}</h2>
@@ -37,7 +33,18 @@
   </div>
 </div>
 </div>
-
+<div class="custom-container">
+  <div class="image-row">
+    <!-- Image 1 -->
+    <img src="{{ settings.image_1 | default: 'https://media.istockphoto.com/id/483955929/photo/treasure.jpg?s=612x612&w=0&k=20&c=YTKQ9NUfvJUKXX-k6Os_XixMQ9vjDWhdwclBmV_uVas=' }}" alt="Image 1" class="image">
+    
+    <!-- Image 2 -->
+    <img src="{{ settings.image_2 | default: 'https://img.onmanorama.com/content/dam/mm/en/news/business/images/2021/1/6/gold-jewellry-treasure.jpg' }}" alt="Image 2" class="image">
+    
+    <!-- Image 3 -->
+    <img src="{{ settings.image_3 | default: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqXuahjHAyblCPAv-WkLtlTl4fblIxL2eX4A4eWw-BZdq90YmRcjuTzD9_1rdVhXSqsf0&usqp=CAU' }}" alt="Image 3" class="image">  
+  </div>
+</div>
 
 {% schema %}
   {
@@ -156,7 +163,25 @@
         "type": "url",
         "id": "card_3_explore_url",
         "label": "Card 3 Explore URL"
-      }
+      },{
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1",
+      "default": "https://media.istockphoto.com/id/483955929/photo/treasure.jpg?s=612x612&w=0&k=20&c=YTKQ9NUfvJUKXX-k6Os_XixMQ9vjDWhdwclBmV_uVas="
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2",
+      "default": "https://img.onmanorama.com/content/dam/mm/en/news/business/images/2021/1/6/gold-jewellry-treasure.jpg"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3",
+      "default": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqXuahjHAyblCPAv-WkLtlTl4fblIxL2eX4A4eWw-BZdq90YmRcjuTzD9_1rdVhXSqsf0&usqp=CAU"
+    }
+
     ],
     "presets": [
       {

@@ -227,4 +227,20 @@
   padding: 20px;
   text-align: center;
 }
-  
+/* hero diamond */
+.custom-container {
+  width: 1144px; /* Set the width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.image-row {
+  display: flex; /* Use flexbox to align images in a row */
+  justify-content: space-between; /* Optional: Space between images */
+}
+
+.image {
+  border-radius: 10px;
+  margin: 50px 0px;
+  width: 370px;
+  height: auto; /* Keep the aspect ratio intact */
+}
