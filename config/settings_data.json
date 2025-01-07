@@ -1,14 +1,5 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 
- {
+{
   "current": {
     "sections": {
       "header": {
@@ -21,10 +12,7 @@
           "show_wishlist_icon": true
         }
       },
-      "background-image-section": {
-        "type": "background-image-section",
-        "settings": {}
-      },
+     
       "footer": {
         "type": "footer",
         "settings": {}
@@ -32,9 +20,9 @@
       "home-page": {
         "type": "home-page",
         "settings": {
-          "background_image": "shopify://shop_images/woman-wearing-thai-clothes-hands-touching-head_11zon-scaled.jpg",
+          "background_image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg",
           "heading_text": "Diamond Jewelry Collection",
-          "description_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+          "description_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luct."
         }
       }
     },
