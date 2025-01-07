@@ -2,7 +2,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<div class="home-page-bg" style="background-image: url({{ section.settings.background_image | img_url: 'original' }});">
+<div class="home-page-bg" 
+     style="background-image: url({{ section.settings.background_image | default: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg' }});">
+
   <div class="container-1">
     <div class="overlay-text">
       <h2 class="responsive-heading">{{ section.settings.heading_text | default: "Exclusive Offers" }}</h2>
@@ -13,41 +15,26 @@
       style="
         background-color: {{ section.settings.button_background_color }};
         border-radius: {{ section.settings.button_border_radius }}px;
-        color: {{ section.settings.text_color }};
-      ">
+        color: {{ section.settings.text_color }};">
       {{ section.settings.button_text }}
     </button>
 
       {% include 'card' with 
- card_1_image: section.settings.card_1_image
-        ,
- card_2_image: section.settings.card_2_image
-        ,
- card_3_image: section.settings.card_3_image
-        ,
- card_1_special_price: section.settings.card_1_special_price
-        ,
- card_1_product_name: section.settings.card_1_product_name
-        ,
- card_1_explore_text: section.settings.card_1_explore_text
-        ,
- card_1_explore_url: section.settings.card_1_explore_url
-        ,
- card_2_special_price: section.settings.card_2_special_price
-        ,
- card_2_product_name: section.settings.card_2_product_name
-        ,
- card_2_explore_text: section.settings.card_2_explore_text
-        ,
- card_2_explore_url: section.settings.card_2_explore_url
-        ,
- card_3_special_price: section.settings.card_3_special_price
-        ,
- card_3_product_name: section.settings.card_3_product_name
-        ,
- card_3_explore_text: section.settings.card_3_explore_text
-        ,
- card_3_explore_url: section.settings.card_3_explore_url
+        card_1_image: section.settings.card_1_image,
+        card_2_image: section.settings.card_2_image,
+        card_3_image: section.settings.card_3_image,
+        card_1_special_price: section.settings.card_1_special_price,
+        card_1_product_name: section.settings.card_1_product_name,
+        card_1_explore_text: section.settings.card_1_explore_text,
+        card_1_explore_url: section.settings.card_1_explore_url,
+        card_2_special_price: section.settings.card_2_special_price,
+        card_2_product_name: section.settings.card_2_product_name,
+        card_2_explore_text: section.settings.card_2_explore_text,
+        card_2_explore_url: section.settings.card_2_explore_url,
+        card_3_special_price: section.settings.card_3_special_price,
+        card_3_product_name: section.settings.card_3_product_name,
+        card_3_explore_text: section.settings.card_3_explore_text,
+        card_3_explore_url: section.settings.card_3_explore_url
       %}
     </div>
   </div>
@@ -75,97 +62,111 @@
         "default": "Limited Time Deals!"
       },
       {
-      "type": "color",
-      "id": "button_background_color",
-      "label": "Button Background Color",
-      "default": "#ccc"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "text color",
-      "default": "#424242"
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "Get In Touch"
-    },
-    {
-      "type": "range",
-      "id": "button_border_radius",
-      "label": "Button Border Radius",
-      "min": 0,
-      "max": 50,
-      "default": 30
-    },
+        "type": "color",
+        "id": "button_background_color",
+        "label": "Button Background Color",
+        "default": "#ccc"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#424242"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "Get In Touch"
+      },
+      {
+        "type": "range",
+        "id": "button_border_radius",
+        "label": "Button Border Radius",
+        "min": 0,
+        "max": 50,
+        "default": 30
+      },
       {
         "type": "image_picker",
         "id": "card_1_image",
         "label": "Card 1 Image"
-      }, {
+      },
+      {
         "type": "text",
         "id": "card_1_special_price",
         "label": "Card 1 Special Price",
         "default": "Special Price"
-      }, {
+      },
+      {
         "type": "text",
         "id": "card_1_product_name",
         "label": "Card 1 Product Name",
         "default": "Rings"
-      }, {
+      },
+      {
         "type": "text",
         "id": "card_1_explore_text",
         "label": "Card 1 Explore Text",
         "default": "Explore"
-      }, {
+      },
+      {
         "type": "url",
         "id": "card_1_explore_url",
         "label": "Card 1 Explore URL"
-      }, {
+      },
+      {
         "type": "image_picker",
         "id": "card_2_image",
         "label": "Card 2 Image"
-      }, {
+      },
+      {
         "type": "text",
         "id": "card_2_special_price",
         "label": "Card 2 Special Price",
         "default": "Special Price"
-      }, {
+      },
+      {
         "type": "text",
         "id": "card_2_product_name",
         "label": "Card 2 Product Name",
         "default": "Rings"
-      }, {
+      },
+      {
         "type": "text",
         "id": "card_2_explore_text",
         "label": "Card 2 Explore Text",
         "default": "Explore"
-      }, {
+      },
+      {
         "type": "url",
         "id": "card_2_explore_url",
         "label": "Card 2 Explore URL"
-      }, {
+      },
+      {
         "type": "image_picker",
         "id": "card_3_image",
         "label": "Card 3 Image"
-      }, {
+      },
+      {
         "type": "text",
         "id": "card_3_special_price",
         "label": "Card 3 Special Price",
         "default": "Special Price"
-      }, {
+      },
+      {
         "type": "text",
         "id": "card_3_product_name",
         "label": "Card 3 Product Name",
         "default": "Rings"
-      }, {
+      },
+      {
         "type": "text",
         "id": "card_3_explore_text",
         "label": "Card 3 Explore Text",
         "default": "Explore"
-      }, {
+      },
+      {
         "type": "url",
         "id": "card_3_explore_url",
         "label": "Card 3 Explore URL"
