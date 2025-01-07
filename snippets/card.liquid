@@ -1,0 +1,66 @@
+<div class="overlay-card">
+  
+  {% comment %} card-1 {% endcomment %}
+  <div class="div">
+    <div class="product_name">
+      <p class="m-0">{{ card_1_special_price }}</p>
+      <h4 class="m-0">{{ card_1_product_name }}</h4>
+      <div class="explore">
+        <a href="{{ card_1_explore_url }}">
+          <i class="fa-solid fa-arrow-trend-up" style="margin-left: 5px;"></i>
+          {{ card_1_explore_text }}
+        </a>
+      </div>
+    </div>
+    <div class="img-card">
+      {% if card_1_image != blank %}
+        <img width="100%" src="{{ card_1_image | img_url: 'original' }}" alt="">
+      {% else %}
+        <img width="100%" src="https://kinclimg3.bluestone.com/f_jpg,c_scale,w_828,q_80,b_rgb:f0f0f0/giproduct/BIDG0319R180_YAA18DIG6XXXXXXXX_ABCD00-PICS-00001-1024-66194.png" alt="">
+      {% endif %}
+    </div>
+  </div>
+
+  {% comment %} card-2 {% endcomment %}
+  <div class="div">
+    <div class="product_name">
+      <p class="m-0 fs-12">{{ card_2_special_price }}</p>
+      <h4 class="m-0">{{ card_2_product_name }}</h4>
+      <div class="explore">
+        <a href="{{ card_2_explore_url }}">
+          <i class="fa-solid fa-arrow-trend-up" style="margin-left: 5px;"></i>
+          {{ card_2_explore_text }}
+        </a>
+      </div>
+    </div>
+    <div class="img-card">
+      {% if card_2_image != blank %}
+        <img width="100%" src="{{ card_2_image | img_url: 'original' }}" alt="">
+      {% else %}
+        <img width="100%" src="https://salty.co.in/cdn/shop/files/AmorEvilEyeRing_4.jpg?v=1714135642&width=1080" alt="">
+      {% endif %}
+    </div>
+  </div>
+
+  {% comment %} card-3 {% endcomment %}
+  <div class="div">
+    <div class="product_name">
+      <p class="m-0">{{ card_3_special_price }}</p>
+      <h4 class="m-0">{{ card_3_product_name }}</h4>
+      <div class="explore">
+        <a href="{{ card_3_explore_url }}">
+          <i class="fa-solid fa-arrow-trend-up" style="margin-left: 5px;"></i>
+          {{ card_3_explore_text }}
+        </a>
+      </div>
+    </div>
+    <div class="img-card">
+      {% if card_3_image != blank %}
+        <img width="100%" src="{{ card_3_image | img_url: 'original' }}" alt="">
+      {% else %}
+        <img width="100%" src="https://www.messika.com/media/wysiwyg/guide-bagues-fiancailles-messika-image-carre-1.jpg" alt="">
+      {% endif %}
+    </div>
+  </div>
+
+</div>

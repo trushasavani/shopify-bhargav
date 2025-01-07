@@ -7,23 +7,35 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+
+ {
   "current": {
     "sections": {
       "header": {
         "type": "header",
+        "settings": {
+          "shop_name": "Your Shop Name",
+          "search_placeholder": "Search products...",
+          "show_cart_icon": true,
+          "show_user_icon": true,
+          "show_wishlist_icon": true
+        }
+      },
+      "background-image-section": {
+        "type": "background-image-section",
+        "settings": {}
+      },
+      "footer": {
+        "type": "footer",
         "settings": {}
       },
       "home-page": {
         "type": "home-page",
         "settings": {
-          "background_image": "shopify://shop_images/2.jpg",
-          "header_text": "Diamond Jewelry Collection"
+          "background_image": "shopify://shop_images/woman-wearing-thai-clothes-hands-touching-head_11zon-scaled.jpg",
+          "heading_text": "Diamond Jewelry Collection",
+          "description_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
         }
-      },
-      "footer": {
-        "type": "footer",
-        "settings": {}
       }
     },
     "content_for_index": []

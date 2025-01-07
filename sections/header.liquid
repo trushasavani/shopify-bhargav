@@ -1,188 +1,115 @@
-<head></head>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 
 
-<header>
-  {% comment %} <h1>{{ settings.store_name }}</h1> {% endcomment %}
-  <div class="header-container">
-    <!-- Search Bar -->
-    <div class="header-left">
-      <form action="/search" method="get" class="search-bar">
-    <div class="search-bar-container">
-      <input type="text" name="q" placeholder="{{ section.settings.search_placeholder }}" />
-      <i class="fas fa-search search-icon"></i>
-    </div>
-  </form>
+<div class="custom-header  bor-bottom ps-0">
+  <div class="container flex-header">
+    <!-- Right Section (Search Bar) -->
+    <div class="right-search">
+      <form action="/search" method="get">
+        <input
+          type="text"
+          name="q"
+          placeholder="{{ section.settings.search_placeholder }}">
+        <button type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
     </div>
 
-    <!-- Store Name -->
-    <div class="header-center">
-      <h1>{{ settings.store_name }}</h1>
-    </div>
- 
-    <div class="header-right">
-      <a href="/wishlist" title="Wishlist">
-        <i class="fas fa-heart"></i>
+    <!-- Middle Section (Logo) -->
+    <div class="logo">
+      <a href="{{ routes.root_url }}">
+        {% if section.settings.logo != blank %}
+          <img src="{{ section.settings.logo | img_url: 'medium' }}" alt="Logo">
+        {% else %}
+          <h1 class="shop_name">{{ shop.name }}</h1>
+        {% endif %}
       </a>
-  <a href="/account" title="Account">
-    <i class="fas fa-user"></i>
-  </a>
-  <a href="/cart" title="Cart">
-    <i class="fas fa-shopping-cart"></i>
-  </a>
+    </div>
+
+    <!-- Left Section (Icons) -->
+
+    <div class="left-icons">
+      {% if section.settings.show_wishlist_icon %}
+        <a href="/wishlist">
+          <i class="fa fa-heart"></i>
+        </a>
+      {% endif %}
+      {% if section.settings.show_cart_icon %}
+        <a href="/cart">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+      {% endif %}
+      {% if section.settings.show_user_icon %}
+        <a href="/account">
+          <i class="fa fa-user"></i>
+        </a>
+      {% endif %}
+
+    </div>
+  </div>
 </div>
 
-   
+<div class="custom-header">
+  <div class="container justofy-content-center">
+    <nav class="navigation">
+      <ul class="m-0 ps-0">
+        {% for link in linklists.main-menu.links %}
+          <li class="pd-5">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
   </div>
+</div>
 
-  <nav>
-    <ul class="nav-bar">
-      <li><a href="{{ section.settings.link_1_url }}">{{ section.settings.link_1_text }}</a></li>
-      <li><a href="{{ section.settings.link_2_url }}">{{ section.settings.link_2_text }}</a></li>
-      <li><a href="{{ section.settings.link_3_url }}">{{ section.settings.link_3_text }}</a></li>
-      <li><a href="{{ section.settings.link_4_url }}">{{ section.settings.link_4_text }}</a></li>
-      <li><a href="{{ section.settings.link_5_url }}">{{ section.settings.link_5_text }}</a></li>
-      <li><a href="{{ section.settings.link_6_url }}">{{ section.settings.link_6_text }}</a></li>
-      <li><a href="{{ section.settings.link_7_url }}">{{ section.settings.link_7_text }}</a></li>
-      <li><a href="{{ section.settings.link_8_url }}">{{ section.settings.link_8_text }}</a></li>
-      <li><a href="{{ section.settings.link_9_url }}">{{ section.settings.link_9_text }}</a></li>
-      <li><a href="{{ section.settings.link_10_url }}">{{ section.settings.link_10_text }}</a></li>
-      <!-- Add more links as needed -->
-    </ul>
-  </nav>
-
- 
 {% schema %}
   {
-    "name": "Navigation Menu",
+    "name": "Custom Header",
     "settings": [
       {
-        "type": "text",
-        "id": "link_1_text",
-        "label": "Link 1 Text",
-        "default": "Rings"
-      },
-      {
-        "type": "url",
-        "id": "link_1_url",
-        "label": "Link 1 URL",
-        "default": "/collections/rings"
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Upload Logo"
       },
       {
         "type": "text",
-        "id": "link_2_text",
-        "label": "Link 2 Text",
-        "default": "Earrings"
-      },
-      {
-        "type": "url",
-        "id": "link_2_url",
-        "label": "Link 2 URL",
-        "default": "/collections/earrings"
+        "id": "shop_name",
+        "label": "Shop Name",
+        "default": "Your Shop Name"
       },
       {
         "type": "text",
-        "id": "link_3_text",
-        "label": "Link 3 Text",
-        "default": "Pendants"
+        "id": "search_placeholder",
+        "label": "Search Placeholder",
+        "default": "Search products..."
       },
       {
-        "type": "url",
-        "id": "link_3_url",
-        "label": "Link 3 URL",
-        "default": "/collections/pendants"
-      },
+        "type": "checkbox",
+        "id": "show_cart_icon",
+        "label": "Show Cart Icon",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "show_user_icon",
+        "label": "Show User Icon",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "show_wishlist_icon",
+        "label": "Show Wishlist Icon",
+        "default": true
+      }
+    ],
+    "presets": [
       {
-        "type": "text",
-        "id": "link_4_text",
-        "label": "Link 4 Text",
-        "default": "All-jewellery"
-      },
-      {
-        "type": "url",
-        "id": "link_4_url",
-        "label": "Link 4 URL",
-        "default": "/collections/all-jewellery"
-      },
-      {
-        "type": "text",
-        "id": "link_5_text",
-        "label": "Link 3 Text",
-        "default": "Gifts"
-      },
-      {
-        "type": "url",
-        "id": "link_5_url",
-        "label": "Link 3 URL",
-        "default": "/collections/gifts"
-      },
-      {
-        "type": "text",
-        "id": "link_6_text",
-        "label": "Link 3 Text",
-        "default": "Gold-coins"
-      },
-      {
-        "type": "url",
-        "id": "link_6_url",
-        "label": "Link 3 URL",
-        "default": "/collections/gold-coins"
-      },
-      {
-        "type": "text",
-        "id": "link_7_text",
-        "label": "Link 3 Text",
-        "default": "Chains"
-      },
-      {
-        "type": "url",
-        "id": "link_7_url",
-        "label": "Link 3 URL",
-        "default": "/collections/chains"
-      },
-      {
-        "type": "text",
-        "id": "link_8_text",
-        "label": "Link 3 Text",
-        "default": "Ready-to-ship"
-      },
-      {
-        "type": "url",
-        "id": "link_8_url",
-        "label": "Link 3 URL",
-        "default": "/collections/ready-to-ship"
-      },
-      {
-        "type": "text",
-        "id": "link_9_text",
-        "label": "Link 3 Text",
-        "default": "10-plus-1-monthly-plan"
-      },
-      {
-        "type": "url",
-        "id": "link_9_url",
-        "label": "Link 3 URL",
-        "default": "/collections/10-plus-1-monthly-plan"
-      },
-      {
-        "type": "text",
-        "id": "link_10_text",
-        "label": "Link 3 Text",
-        "default": "locate-our-store"
-      },
-      {
-        "type": "url",
-        "id": "link_10_url",
-        "label": "Link 3 URL",
-        "default": "/collections/locate-our-store"
-      },
-      {
-      "type": "text",
-      "id": "search_placeholder",
-      "label": "Search Placeholder",
-      "default": "Search products..."
-    }
-      
+        "name": "Custom Header",
+        "category": "Header"
+      }
     ]
   }
-  {% endschema %}
-</header>
+{% endschema %}
