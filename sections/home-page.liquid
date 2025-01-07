@@ -3,7 +3,7 @@
 </head>
 
 <div class="home-page-bg" 
-     style="background-image: url({{ section.settings.background_image | default: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg' }});">
+     style="background-image: url({{ section.settings.background_image | default: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg' | img_url: 'original' }});">
 
   <div class="container-1">
     <div class="overlay-text">
